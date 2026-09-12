@@ -614,7 +614,7 @@ INSERT INTO tb_venda_item (id_item, id_venda, id_produto, quantidade, preco_unit
 -- POPULANDO TB_CALENDARIO (ANO 2026) - GERADO VIA PL/SQL
 -- ---------------------------------------------------------------------
 BEGIN
-  FOR d IN (SELECT ADD_MONTHS(DATE '2026-01-01', ROWNUM - 1) AS dt_ref
+  FOR d IN (SELECT DATE '2026-01-01' + ROWNUM - 1 AS dt_ref
             FROM   dual
             CONNECT BY LEVEL <= 365) LOOP
     INSERT INTO tb_calendario (dt_ref, ano, mes, dia, trimestre, nome_mes, dia_semana, nome_dia_semana)
@@ -624,9 +624,9 @@ BEGIN
       EXTRACT(MONTH FROM d.dt_ref),
       EXTRACT(DAY FROM d.dt_ref),
       CEIL(EXTRACT(MONTH FROM d.dt_ref) / 3),
-      TO_CHAR(d.dt_ref, 'Month', 'NLS_DATE_LANGUAGE=PORTUGUESE'),
-      TO_NUMBER(TO_CHAR(d.dt_ref, 'D')),
-      TO_CHAR(d.dt_ref, 'Day', 'NLS_DATE_LANGUAGE=PORTUGUESE')
+      RTRIM(TO_CHAR(d.dt_ref, 'Month', 'NLS_DATE_LANGUAGE=PORTUGUESE')),
+      TRUNC(d.dt_ref) - TRUNC(d.dt_ref, 'IW') + 1,
+      RTRIM(TO_CHAR(d.dt_ref, 'Day', 'NLS_DATE_LANGUAGE=PORTUGUESE'))
     );
   END LOOP;
   COMMIT;
