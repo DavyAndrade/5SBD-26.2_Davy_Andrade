@@ -102,6 +102,13 @@ JOIN tb_produtos p ON p.id_produto = mv.id_produto
 ORDER BY mv.faturamento_total DESC;
 ```
 
+Resultado com as 5 vendas iniciais:
+
+- Notebook Dell Latitude — 2 transações, 3 unidades, R$ 13.500,00
+- Monitor UltraWide 29 — 1 transação, 5 unidades, R$ 6.000,00
+- Teclado Mecânico ABNT2 — 1 transação, 10 unidades, R$ 3.500,00
+- Cadeira Ergonômica — 1 transação, 3 unidades, R$ 3.300,00
+
 ### 5. Novos dados e refresh
 
 ```sql
@@ -120,10 +127,45 @@ END;
 SELECT * FROM mv_vendas_por_produto WHERE id_produto = 1;
 ```
 
+O que acontece na prática com o produto 1:
+
+- Antes: 2 transações, 3 unidades, R$ 13.500,00.
+- Depois do INSERT e antes do refresh: **continua** 2 / 3 / 13.500,00. A MView não é virtual, o dado novo ainda não está lá.
+- Depois do `DBMS_MVIEW.REFRESH` com `'F'`: 3 transações, 8 unidades, R$ 36.000,00.
+
+Isso é a prova de que a MView guarda resultado em disco — e de que sem refresh o painel mostra número velho.
+
 ## Exercícios
 
 1. **`mv_vendas_categoria`** — faturamento e quantidade de vendas **por categoria**, o que exige join entre `tb_vendas` e `tb_produtos`. Configure com `REFRESH COMPLETE ON DEMAND`. Complete aqui porque join não costuma ser elegível para FAST (mudança em duas tabelas exigiria log nas duas).
-2. **`ON COMMIT`** — crie uma MView nesse modo e insira dados com `COMMIT`. Repare que o commit fica mais lento: o refresh roda dentro da sua transação. Conclusão: só em ambiente controlado.
+
+```sql
+CREATE MATERIALIZED VIEW mv_vendas_categoria
+BUILD IMMEDIATE
+REFRESH COMPLETE ON DEMAND
+AS
+SELECT p.categoria,
+       COUNT(*)           AS total_vendas,
+       SUM(v.valor_total) AS faturamento_total
+FROM tb_vendas v
+JOIN tb_produtos p ON p.id_produto = v.id_produto
+GROUP BY p.categoria;
+```
+
+Resultado com os dados do lab:
+
+- Informática — 4 vendas, R$ 42.000,00
+- Periféricos — 1 venda, R$ 3.500,00
+- Mobiliário — 1 venda, R$ 3.300,00
+
+2. **`ON COMMIT`** — o jeito de testar é trocar o modo na própria MView e fazer um INSERT + COMMIT:
+
+```sql
+ALTER MATERIALIZED VIEW mv_vendas_por_produto REFRESH FAST ON COMMIT;
+```
+
+O que acontece nesse caso: com `ON COMMIT`, a atualização roda **dentro** da sua transação, na hora do COMMIT. A MView já sai do COMMIT com dado novo. O preço é o COMMIT mais lento (tem refresh embutido) e o risco de contenção — se dois processos mexem na mesma tabela base, um espera o outro. Por isso em OLTP de alta concorrência a recomendação é manter `ON DEMAND`.
+
 3. **Dicionário de dados** — para ver o que existe no seu schema:
 
 ```sql
@@ -133,6 +175,12 @@ FROM user_mviews;
 SELECT master, log_table, log_trigger
 FROM user_mview_logs;
 ```
+
+Saída real do lab:
+
+- `MV_VENDAS_CATEGORIA` — `DEMAND`, `COMPLETE`
+- `MV_VENDAS_POR_PRODUTO` — `DEMAND`, `FAST`
+- `user_mview_logs`: master `TB_VENDAS`, log `MLOG$_TB_VENDAS` (sem trigger)
 
 ## Boas práticas (resumo)
 
