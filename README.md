@@ -15,7 +15,7 @@ Resoluções na ordem das atividades do Classroom. Arquivos em Markdown, prontos
 | 07 | Materialized Views | `ATIV_07_MATERIALIZED_VIEWS.md` |
 | 08 | Indexação | `ATIV_08_INDEXACAO.md` |
 | 09 | Sequences | `ATIV_09_SEQUENCES.md` |
-| 10 | Types | a fazer |
+| 10 | Types | `ATIV_10_TYPES.md` |
 | 11 | Synonyms | `ATIV_11_SYNONYMS.md` |
 | 12 | Procedures | a fazer |
 | 13 | Funções | a fazer |
@@ -33,10 +33,5 @@ Resoluções na ordem das atividades do Classroom. Arquivos em Markdown, prontos
 - `ATIV_07_MATERIALIZED_VIEWS.md` — materialized views (Atividade 07)
 - `ATIV_08_INDEXACAO.md` — indexação (Atividade 08)
 - `ATIV_09_SEQUENCES.md` — sequences (Atividade 09)
-- `ATIV_11_SYNONYMS.md` — synonyms (Atividade 11)
+- `ATIV_10_TYPES.md` — Types (UDTs) (Atividade 10)
 
-## Como usar
-
-1. Copie o conteúdo do `.md` para o Google Docs (ou importe o arquivo).
-2. Blocos de código e tabelas se mantêm formatados.
-3. Para PDF: `File > Download > PDF Document`.
