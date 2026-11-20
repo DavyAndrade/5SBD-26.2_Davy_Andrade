@@ -243,7 +243,3 @@ Explique os impactos arquiteturais da opção `NOCACHE` em um sistema de alta co
 - Oracle Database SQL Language Reference — `CREATE SEQUENCE`, `ALTER SEQUENCE`
 - Oracle Database Concepts — *Sequences, Identity Columns*
 - Oracle Database Administrator's Guide — *Managing Sequences*
-
----
-
-**Dica para Google Docs**: Copie este markdown e use o plugin "Markdown to Docs" ou a função "Importar arquivo Markdown" do Google Docs. As tabelas e blocos de código se manterão formatados. Para versão PDF, use `File > Download > PDF Document` após a importação.

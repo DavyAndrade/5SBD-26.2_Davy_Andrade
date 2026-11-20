@@ -2,7 +2,7 @@
 
 Views (visões) são tabelas virtuais: o Oracle guarda no dicionário apenas a query definidora, nada de dados. Consultar uma view é executar essa query sob demanda. Três papéis que a unidade cobra: **abstrair o JOIN físico**, **restringir acesso (segurança/LGPD)** e **centralizar a regra analítica pro BI**.
 
-> Todos os SQLs abaixo foram executados e conferidos em um Oracle Free 26ai real (container Docker `gvenzl/oracle-free`), com o `ATIV_01_DDL_V1.0.sql` e o `ATIV_02_SEED_V1.0.sql` carregados. Os retornos citados são os da execução real.
+> Os resultados abaixo foram obtidos executando os scripts no Oracle Database 26ai Free, com o `ATIV_01_DDL_V1.0.sql` e o `ATIV_02_SEED_V1.0.sql` carregados previamente.
 
 ---
 

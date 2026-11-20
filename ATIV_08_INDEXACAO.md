@@ -251,7 +251,3 @@ WHERE EXTRACT(YEAR FROM data_admissao) = 2022;
 - Oracle Database SQL Language Reference — `CREATE INDEX`, `CREATE MATERIALIZED VIEW`
 - Oracle Database Concepts — *ROWID, B-Tree indexes*
 - Lei nº 13.709/2018 (LGPD) — princípios de segurança e minimização no tratamento de dados
-
----
-
-**Dica para Google Docs**: Copie este markdown e use o plugin "Markdown to Docs" ou a função "Importar arquivo Markdown" do Google Docs. As tabelas e blocos de código se manterão formatados. Para versão PDF, use `File > Download > PDF Document` após a importação.

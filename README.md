@@ -1,6 +1,6 @@
 # 5SBD — Atividades Práticas
 
-Resoluções na ordem das atividades do Classroom. Arquivos em Markdown, prontos para copiar/colar no Google Docs.
+Resoluções na ordem das atividades do Classroom. Arquivos em Markdown.
 
 ## Tabela geral (atividades 01–15)
 

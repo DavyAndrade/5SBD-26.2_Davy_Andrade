@@ -191,7 +191,3 @@ Sem o `GRANT`, o synonym existe mas a consulta falha. Grant e synonym são coisa
 - Oracle Database SQL Language Reference — `CREATE SYNONYM`, `DROP SYNONYM`
 - Oracle Database Administrator's Guide — *Managing Synonyms*
 - Oracle Database Security Guide — *Object Privileges*
-
----
-
-**Dica para Google Docs**: copie este markdown e use "Importar arquivo Markdown" ou o plugin "Markdown to Docs". Tabelas e blocos de código continuam formatados. Para PDF, `File > Download > PDF Document` depois da importação.

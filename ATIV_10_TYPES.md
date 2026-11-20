@@ -278,7 +278,3 @@ Ordem esperada (área crescente): 3x4 (12), 10x2 (20), 5x5 (25). Sem o MAP, esse
 - Oracle Database Object-Relational Developer's Guide — *Object Types, Collections, Type Evolution*
 - Oracle Database SQL Language Reference — `CREATE TYPE`, `CREATE TYPE BODY`, `TABLE` collection expression
 - Oracle Database PL/SQL Language Reference — *Associative Arrays*
-
----
-
-**Dica para Google Docs**: copie este markdown e use "Importar arquivo Markdown" ou o plugin "Markdown to Docs". Tabelas e blocos de código continuam formatados. Para PDF, `File > Download > PDF Document` depois da importação.
