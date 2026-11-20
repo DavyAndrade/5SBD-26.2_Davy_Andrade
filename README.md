@@ -2,23 +2,25 @@
 
 Resoluções na ordem do anexo da disciplina. Arquivos em Markdown, prontos para copiar/colar no Google Docs.
 
+## Unidades completas
+
+| Unidade | Arquivo | Descrição |
+|---|---|---|
+| 3 | `QUESTOES_UNIDADE_3_CONSTRAINTS.md` | Constraints FK/CHECK/UNIQUE/CASCADE/soft delete |
+| 4 | `QUESTOES_UNIDADE_4_VIEWS.md` | Views de abstração, segurança e reuso |
+| 5 | `QUESTOES_UNIDADE_5_MATERIALIZED_VIEWS.md` | Materialized Views, refresh, Query Rewrite |
+| 6 | `QUESTOES_UNIDADE_6_INDEXACAO.md` | Índices B-Tree, FBI, composto, Bitmap, IOT |
+| 7 | `QUESTOES_UNIDADE_7_SEQUENCES.md` | Sequences, NEXTVAL/CURRVAL, CACHE, CYCLE |
+| 8 | `QUESTOES_UNIDADE_8_SYNONYMS.md` | Synonyms privados/públicos, resolução de nomes |
+
+## Atividades com arquivos .sql
+
 | # | Atividade | Arquivo |
 |---|---|---|
-| 01 | Implantação do Modelo Físico | `SISTEMA_VENDAS_DDL_V1.0.sql` |
-| 02 | Script de Carga de Dados | `SISTEMA_VENDAS_SEED_V1.0.sql` |
+| 1 | Implantação do Modelo Físico | `SISTEMA_VENDAS_DDL_V1.0.sql` |
+| 2 | Script de Carga de Dados | `SISTEMA_VENDAS_SEED_V1.0.sql` |
 | 03 | Consultas | a fazer |
 | 04 | SQL para Análise de Dados | a fazer |
-| 05 | Modelagem Física e Qualidade de Dados | `ATIV_05_MODELO_FISICO_QUALIDADE.md` |
-| 06 | Views como Camada de Abstração, Segurança e Reuso | `ATIV_06_VIEWS.md` |
-| 07 | Materialized Views | `ATIV_07_MATERIALIZED_VIEWS.md` |
-| 08 | Indexação | `ATIV_08_INDEXACAO.md` |
-| 09 | Sequences | `ATIV_09_SEQUENCES.md` |
-| 10 | Types | a fazer |
-| 11 | Synonyms | `ATIV_11_SYNONYMS.md` |
-| 12 | Procedures | a fazer |
-| 13 | Funções | a fazer |
-| 14 | Packages | a fazer |
-| 15 | Trigger | a fazer |
 
 ## Materiais de apoio
 
