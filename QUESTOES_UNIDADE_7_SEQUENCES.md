@@ -182,6 +182,8 @@ CREATE SEQUENCE seq_ticket_diario
     CACHE 2;
 ```
 
+Comportamento esperado nas chamadas a `NEXTVAL`: 1, 2, 3, 4, 5 e depois **volta para 1** em vez de dar `ORA-08004`. É o `CYCLE` fazendo o papel dele — bom para numeração de senha/ticket do dia, péssimo para PK (repetiria chave).
+
 ### Exercício 2: Migração Trigger vs DEFAULT
 
 Escreva um código demonstrando a atribuição clássica de uma sequência via Trigger `BEFORE INSERT` (padrão pré-Oracle 12c) e compare-o com a sintaxe moderna `DEFAULT seq.NEXTVAL`. Destaque as melhorias em termos de legibilidade, manutenção e performance de execução.
