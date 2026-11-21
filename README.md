@@ -17,7 +17,7 @@ Resoluções na ordem das atividades do Classroom. Arquivos em Markdown.
 | 09 | Sequences | `ATIV_09_SEQUENCES.md` |
 | 10 | Types | `ATIV_10_TYPES.md` |
 | 11 | Synonyms | `ATIV_11_SYNONYMS.md` |
-| 12 | Procedures | a fazer |
+| 12 | Procedures | `ATIV_12_PROCEDURES.md` |
 | 13 | Funções | a fazer |
 | 14 | Packages | a fazer |
 | 15 | Trigger | a fazer |
@@ -33,5 +33,6 @@ Resoluções na ordem das atividades do Classroom. Arquivos em Markdown.
 - `ATIV_07_MATERIALIZED_VIEWS.md` — materialized views (Atividade 07)
 - `ATIV_08_INDEXACAO.md` — indexação (Atividade 08)
 - `ATIV_09_SEQUENCES.md` — sequences (Atividade 09)
-- `ATIV_10_TYPES.md` — Types (UDTs) (Atividade 10)
 
+- `ATIV_11_SYNONYMS.md` — synonyms (Atividade 11)
+- `ATIV_12_PROCEDURES.md` — stored procedures (Atividade 12)
