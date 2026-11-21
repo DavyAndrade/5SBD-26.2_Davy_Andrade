@@ -20,7 +20,7 @@ Resoluções na ordem das atividades do Classroom. Arquivos em Markdown.
 | 12 | Procedures | `ATIV_12_PROCEDURES.md` |
 | 13 | Funções | a fazer |
 | 14 | Packages | a fazer |
-| 15 | Trigger | a fazer |
+| 15 | Trigger | `ATIV_15_TRIGGERS.md` |
 
 ## Materiais de apoio
 
@@ -36,3 +36,4 @@ Resoluções na ordem das atividades do Classroom. Arquivos em Markdown.
 
 - `ATIV_11_SYNONYMS.md` — synonyms (Atividade 11)
 - `ATIV_12_PROCEDURES.md` — stored procedures (Atividade 12)
+- `ATIV_15_TRIGGERS.md` — triggers (Atividade 15)
